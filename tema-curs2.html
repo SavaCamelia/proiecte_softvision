@@ -1,0 +1,115 @@
+<html>
+
+<body>
+    <script>
+        //exercitiul 1
+        var moneda="USD";
+        switch(moneda){
+            case "EUR":console.log(Math.round(749/4.83));break;
+            case "HUF":console.log(Math.round(749*74.1));break;
+            case "USD":console.log(Math.round(749/4.45));break;
+        }
+        
+        //exercitiul 2
+        function  tip_date(param){
+            return typeof param;
+        }
+        console.log(tip_date("abc"));
+
+        //exercitiul 3
+         function concatenare(param){
+             var rezultat,i;
+             rezultat=param[0];
+             i=1;
+             while (i<param.length)
+             {
+                 while (param[i-1]==' ' && param[i]==' ' && i<param.length)
+                        i++;
+                 if (param[i-1]==' ')
+                    rezultat=rezultat+param[i];
+                 i++;
+             }
+             return rezultat;
+         }
+         console.log(concatenare("Universitatea     Tehnica Cluj Napoca"));
+         const fraze = [
+            "Quisque faucibus ipsum id nibh egestas bibendum.",
+            "Phasellus tincidunt sapien nec est tempus lacinia.",
+            "Curabitur ac elit at turpis ultrices hendrerit at et tellus.",
+            "Praesent a magna a ligula gravida sodales eu ut erat.",
+            "Ut eleifend velit vitae ipsum mattis viverra."
+            ]
+         var i;
+         for (i=0;i<fraze.length;i++)
+            console.log(concatenare(fraze[i]));
+
+         //exercitiul 4
+         class Shape{
+             constructor(color,array){
+                 this.color=color;
+                 this.array=array;
+             }
+            perimeter(){
+                 var i,sum=0;
+                 for (i=0;i<this.array.length;i++)
+                 sum+=this.array[i];
+                 return sum;
+             }
+            semiperimeter(){
+                return this.perimeter()/2;
+             }
+            typeofpolygon(){
+                switch(this.array.length){
+                    case 3:console.log("triunghi");break;
+                    case 4:console.log("patrulater");break;
+                    case 5:console.log("pentagon");break;
+                    case 6:console.log("hexagon");break;
+                    default:console.log("WORK IN PROGRESS");
+                }
+             }
+         }
+         const myShape=new Shape("red",[4,3,5,4,8]);
+         myShape.typeofpolygon();
+         console.log(myShape.color);
+         console.log(myShape.perimeter());
+         console.log(myShape.semiperimeter());
+
+         //exercitiul 5
+         class Square extends Shape{
+                constructor(color,array){
+                    super(color,array);
+                }
+                aria(){
+                    console.log("Aria patratului este " + this.array[0]**2);
+                }
+         }
+
+         class Hexagon extends Shape{
+             constructor(color,array){
+                 super(color,array);
+             }
+             aria(){
+                console.log("Aria hexagonului este " + Math.round((3*Math.sqrt(3)/2)*(this.array[0]**2)));
+             }
+         }
+
+         const mysquare=new Square("verde",[3,3,3,3]);
+         console.log("Caracteristicile mysquare sunt:")
+         mysquare.typeofpolygon();
+         console.log("Perimetrul patratului e egal cu " + mysquare.perimeter());
+         console.log("Semiperimetrul patratului e egal cu " + mysquare.semiperimeter());
+         mysquare.aria();
+         console.log("Culoarea patratului e " + mysquare.color);
+         const myhexagon=new Hexagon("albastru",[4,4,4,4,4,4]);
+         console.log("Caracteristicile myhexagon sunt:")
+         myhexagon.typeofpolygon();
+         console.log("Perimetrul hexagonului e egal cu " + myhexagon.perimeter());
+         console.log("Semiperimetrul patratului e egal cu " + myhexagon.semiperimeter());
+         myhexagon.aria();
+         console.log("Culoarea hexagonului e " + myhexagon.color);
+
+
+    </script>
+</body>
+
+</html>

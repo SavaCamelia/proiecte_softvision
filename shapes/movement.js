@@ -6,17 +6,6 @@ export class Movement {
         this.validator = new Validator(this.shape, this.cells);
         this.canMove = true;
     }
-    up() {
-        const shape = this.shape;
-        this.shape.rotate();
-        const validatepotentialShape = new Validator(this.shape, this.cells);
-        console.log(this.shape.row,this.shape.column);
-        const checkpotentialShape = validatepotentialShape.checkNext();
-        if (checkpotentialShape) {
-            this.shape=shape;
-        } 
-        this.shape.draw();
-    }
     down() {
         const row = this.shape.row;
         const column = this.shape.column;
@@ -56,5 +45,18 @@ export class Movement {
         }
         this.shape.column--;
         this.shape.draw();
+    }
+    rotate(){
+        const row = this.shape.row;
+        const column = this.shape.column;
+
+        this.shape.clear();
+        const nextTemplate=this.shape.getTemplate(this.shape.templateIndex + 1);
+        const nextNotAvailable = this.validator.checkNext(row, column,nextTemplate);
+        if (nextNotAvailable) {
+            this.shape.draw();
+            return;
+        }
+        this.shape.rotate();
     }
 }

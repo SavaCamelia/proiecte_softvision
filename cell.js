@@ -9,9 +9,9 @@ export class Cell {
         this.canvas = document.getElementById('canvasId');
         this.context = this.canvas.getContext("2d");
     }
-    draw(color) {
+    draw() {
         this.context.beginPath();
-        this.context.fillStyle = color || this.color;
+        this.context.fillStyle = this.color;
         this.context.rect(this.y * this.height, this.x * this.width, 30, 30);
         this.context.fill();
         this.context.stroke();

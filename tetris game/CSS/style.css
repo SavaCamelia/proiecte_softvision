@@ -1,0 +1,56 @@
+#content1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#titleGame{
+    width: 200px;
+    height: 600px;
+    border: 5px solid;
+    text-align: center;
+}
+
+#utils{
+    width: 200px;
+    height: 600px;
+    border: 5px solid;
+}
+
+#startGame{
+    width: 100px;
+    height: 50px;
+    border: 5px solid;
+    background-color: transparent;
+    text-align: center;
+    font-size: 16px;
+}
+#scorePlaceholder{
+    width: 150px;
+    height: 25px;
+    border: 5px solid;
+    background-color: transparent;
+    text-align: center;
+    font-size: 16px;
+}
+
+#nextShape{
+    width: 150px;
+    height: 100px;
+    border: 5px solid;
+}
+
+#content2{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin-top: -500px;
+    margin-left: 675px;
+}
+
+#lines {
+    width: 150px;
+    height: 25px;
+    border: 5px solid;
+    text-align: center;
+}

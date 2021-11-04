@@ -1,13 +1,21 @@
 <html>
 
 <head>
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
     <script src="main.js" type="module"></script>
 </head>
 
 <body>
-    <h1>Tetris game</h1>
-    <p id="scorePlaceholder">Score <strong id="score">0</strong></p>
-    <canvas id="canvasId" width="300px" height="600px" style="border: 1px solid;"></canvas>
+    <div id="content1">
+        <canvas id="titleGame"></canvas>
+        <canvas id="canvasId" width="300px" height="600px" style="border: 5px solid red;"></canvas>
+        <canvas id="utils"></canvas>
+    </div>
+    <div id ="content2">
+        <p id="lines">Lines <strong id="linesNumber">0</strong></p>
+        <p id="scorePlaceholder">Score <strong id="score">0</strong></p>
+        <canvas id="nextShape" ></canvas>
+        <button id="startGame">Start</button>
+    </div>
 </body>
-
 </html>

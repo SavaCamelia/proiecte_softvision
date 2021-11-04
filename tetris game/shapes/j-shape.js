@@ -5,24 +5,21 @@ export class J extends Shape {
         this.template = this.getTemplates()[this.templateIndex];
     }
     getTemplates() {
-        const template1 = [
-            [0, 1],
-            [0, 1],
-            [1, 1]
-        ],
-            template2 = [
-                [1, 0, 0],
-                [1, 1, 1]
-            ],
-            template3 = [
-                [1, 1],
-                [1, 0],
-                [1, 0]
-            ],
-            template4 = [
-                [1, 1, 1],
-                [0, 0, 1]
-            ];
+        const [template1, template2, template3, template4] = [
+            [[0, 1],
+             [0, 1],
+             [1, 1]],
+
+            [[1, 0, 0],
+             [1, 1, 1]],
+
+            [[1, 1],
+             [1, 0],
+             [1, 0]],
+
+            [[1, 1, 1],
+             [0, 0, 1]]
+        ];
         return [template1, template2, template3, template4];
     }
 }

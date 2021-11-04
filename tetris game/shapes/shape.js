@@ -1,10 +1,6 @@
 export class Shape {
     constructor(row, column, cells, color) {
-        this.row = row;
-        this.column = column;
-        this.cells = cells;
-        this.color = color;
-        this.templateIndex = 0;
+        [this.row, this.column, this.cells, this.color, this.templateIndex] = [row, column, cells, color, 0];
     }
     draw() {
         for (let row = 0; row < this.template.length; row++) {

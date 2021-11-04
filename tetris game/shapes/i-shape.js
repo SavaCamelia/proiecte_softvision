@@ -5,13 +5,14 @@ export class I extends Shape {
         this.template = this.getTemplates()[this.templateIndex];
     }
     getTemplates() {
-        const template1 = [
-            [1],
-            [1],
-            [1],
-            [1]
-        ],
-            template2 = [[1, 1, 1, 1]];
+        const [template1, template2] = [
+        [[1],
+         [1],
+         [1],
+         [1]],
+
+        [[1, 1, 1, 1]]
+    ];
         return [template1, template2];
     }
 }

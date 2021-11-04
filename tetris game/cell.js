@@ -1,11 +1,7 @@
 export class Cell {
     constructor(x, y, color) {
-        this.x = x;
-        this.y = y;
-        this.color = color;
-        this.width = 30;
-        this.height = 30;
-        this.isEmpty = true;
+        [this.x, this.y, this.color] = [x, y, color];
+        [this.width, this.height, this.isEmpty] = [30, 30, true];
         this.canvas = document.getElementById('canvasId');
         this.context = this.canvas.getContext("2d");
     }
@@ -18,3 +14,5 @@ export class Cell {
         this.context.closePath();
     }
 }
+
+//comentariu

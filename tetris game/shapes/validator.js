@@ -1,7 +1,6 @@
 export class Validator {
     constructor(shape, cells) {
-        this.shape = shape;
-        this.cells = cells;
+        [this.shape, this.cells] = [shape, cells];
     }
     checkNext(shapeRow, shapeColumn, nextTemplate) {
         const shapeTemplate = nextTemplate || this.shape.template;

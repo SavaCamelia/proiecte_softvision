@@ -4,6 +4,8 @@ import { generateNewShape, getRandomInt } from './shapes/shape-generator.js';
 
 const [rows, columns] = [20, 10];
 
+//primul meu comentariu din acest fisier js
+
 const grid = new Grid(rows, columns);
 grid.make();
 
@@ -82,4 +84,7 @@ function thirdCanvas() {
 }
 thirdCanvas();
 
-//primul comentariu din fisier
+//primul meu comentariu sin
+
+//comentariul meu adaugat pentru exemplificare
+

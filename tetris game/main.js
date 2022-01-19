@@ -81,3 +81,5 @@ function thirdCanvas() {
     });
 }
 thirdCanvas();
+
+//primul comentariu din fisier

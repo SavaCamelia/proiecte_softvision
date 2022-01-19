@@ -81,3 +81,5 @@ function thirdCanvas() {
     });
 }
 thirdCanvas();
+
+//comentariu nou adaugat la final pentru exemplificare
